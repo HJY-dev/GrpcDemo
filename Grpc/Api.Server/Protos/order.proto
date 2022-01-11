@@ -1,0 +1,23 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Api.Server";
+
+package order;
+
+
+// The greeting service definition.
+service Orders {
+  // Sends a greeting
+  rpc GetOrderList (OrderRequest) returns (OrderReply);
+}
+
+// The request message containing the user's name.
+message OrderRequest {
+  int32 page  = 1;
+  int32 size = 2;
+}
+
+// The response message containing the greetings.
+message OrderReply {
+  string message = 1;
+}
